@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="multiples" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="auroral-belt_1-520x763" translatesAutoresizingMaskIntoConstraints="NO" id="BQD-9U-SNP" userLabel="auroralBg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MULTIPLES" translatesAutoresizingMaskIntoConstraints="NO" id="Zoi-uo-qyj" userLabel="LogoImg">
+                                <rect key="frame" x="93" y="97" width="426" height="128"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add multiple here" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eT1-Uy-04O" userLabel="addMultipleHere">
+                                <rect key="frame" x="185" y="407" width="242" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="B3N-kf-rip"/>
+                                    <constraint firstAttribute="width" constant="160" id="PKX-jN-WLn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press Add to add numbers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkn-Dk-UcO" userLabel="SumLbl">
+                                <rect key="frame" x="185" y="228" width="249" height="48"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.98357371794871795" green="0.98357371794871795" blue="0.98357371794871795" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeF-Rb-Cin" userLabel="AddBtn">
+                                <rect key="frame" x="212" y="360" width="194" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="3TY-MV-2bw"/>
+                                    <constraint firstAttribute="width" constant="194" id="gQ1-SB-KA3"/>
+                                </constraints>
+                                <state key="normal" image="add-button-blue-hi"/>
+                                <connections>
+                                    <action selector="onAddBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ve0-yo-xgg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RV-qG-Fs6">
+                                <rect key="frame" x="186" y="451" width="246" height="141"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="141" id="1rt-c1-Dg0"/>
+                                    <constraint firstAttribute="width" constant="246" id="X8E-aq-CrI"/>
+                                </constraints>
+                                <state key="normal" image="playbutton"/>
+                                <connections>
+                                    <action selector="onPlayBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="csM-Vk-72f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zoi-uo-qyj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="73" id="3wK-A2-eAp"/>
+                            <constraint firstItem="YeF-Rb-Cin" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fs0-wp-3ak"/>
+                            <constraint firstItem="YeF-Rb-Cin" firstAttribute="top" secondItem="vkn-Dk-UcO" secondAttribute="bottom" constant="84" id="G0d-rL-YI1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1RV-qG-Fs6" secondAttribute="bottom" constant="8" id="GRP-CQ-8jU"/>
+                            <constraint firstItem="Zoi-uo-qyj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="77" id="Gm9-aq-Kme"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zoi-uo-qyj" secondAttribute="trailing" constant="61" id="Ibp-b6-fhI"/>
+                            <constraint firstItem="BQD-9U-SNP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Kh5-OI-3zy"/>
+                            <constraint firstItem="1RV-qG-Fs6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QFu-Zb-id2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BQD-9U-SNP" secondAttribute="bottom" id="RxG-f3-quO"/>
+                            <constraint firstItem="eT1-Uy-04O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vf2-wc-hmj"/>
+                            <constraint firstItem="vkn-Dk-UcO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XeT-kX-R4m"/>
+                            <constraint firstItem="eT1-Uy-04O" firstAttribute="top" secondItem="vkn-Dk-UcO" secondAttribute="bottom" constant="131" id="YKR-4D-qyz"/>
+                            <constraint firstItem="BQD-9U-SNP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ZCE-5k-5YY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BQD-9U-SNP" secondAttribute="trailing" constant="-20" id="cVs-Un-dyq"/>
+                            <constraint firstItem="Zoi-uo-qyj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gjE-9O-1BY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eT1-Uy-04O" secondAttribute="bottom" constant="163" id="kdD-KF-uCw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AddMultipleHere" destination="eT1-Uy-04O" id="sjZ-gb-8y8"/>
+                        <outlet property="addBtn" destination="YeF-Rb-Cin" id="rUQ-zL-f9x"/>
+                        <outlet property="addMultipleHere" destination="eT1-Uy-04O" id="Hxv-YR-opp"/>
+                        <outlet property="logoImg" destination="Zoi-uo-qyj" id="5GB-KW-A97"/>
+                        <outlet property="playBtn" destination="1RV-qG-Fs6" id="JuH-RQ-09e"/>
+                        <outlet property="sumLbl" destination="vkn-Dk-UcO" id="Uyn-wK-7XT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="226" y="339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MULTIPLES" width="543" height="109"/>
+        <image name="add-button-blue-hi" width="600" height="201"/>
+        <image name="auroral-belt_1-520x763" width="520" height="763"/>
+        <image name="playbutton" width="380" height="400"/>
+    </resources>
+</document>
